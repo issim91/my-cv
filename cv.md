@@ -8,14 +8,15 @@
 -	Настройка CI/CD и автоматизация деплоя.
 -	Мониторинг метрик/логов/ошибок.
 -	Нагрузочное тестирование и профилирование, устранение bottleneck’ов производительности.
--	Интеграции с AI-сервисами: OpenAI, Google Gemini, Replicate, ElevenLabs, HeyGen, Whisper, Hedra.
+-	Интеграции с AI-сервисами: OpenAI, Gemini, Replicate, ElevenLabs, HeyGen, Whisper, Hedra.
 
 Навыки
--	Backend: Python, Django, Flask, REST API, Celery, OpenAPI/Swagger
--	DB/Cache: PostgreSQL (schema design, indexes, query optimization), Redis
--	DevOps/Infra: Git, CI/CD, AWS (EC2, RDS, S3, CloudWatch, SES), Dokku, Nginx, Load Balancer, Linux, DigitalOcean
--	Architecture: monolith, microservices, integrations
--	Performance/Observability: load testing, profiling, CloudWatch, OpenSearch, CloudWatch, Sentry, New Relic, Better Stack
+-	Backend-разработка: Python, Django, Flask, REST API, Celery, OpenAPI/Swagger
+-	Архитектура: Monoliths & Microservices, External integrations / ETL
+-	Базы данных и кэш: PostgreSQL (schema design, indexing, query optimization), Redis (caching, pub/sub)
+-	Инфраструктура и деплой: Git, CI/CD, AWS (EC2, RDS, S3, CloudWatch, SES, ALB/ELB), Dokku, Nginx, Linux, Docker
+-	AI-интеграции: OpenAI, Gemini, Replicate, ElevenLabs, HeyGen, Whisper, Hedra
+-	Производительность и наблюдаемость: Load testing, profiling, New Relic (APM/Tracing), Sentry (Errors), OpenSearch (Logs/Search), CloudWatch (Metrics), Better Stack (Uptime)
 
 Качество кода и процессы
 -	Code review, поддержка единого стиля.
