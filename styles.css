@@ -17,3 +17,74 @@
     content: ' />';
     color: #195de6;
 }
+
+/* Animated gradient text */
+.gradient-text {
+    background: linear-gradient(90deg,
+            #195de6 0%,
+            #6366f1 25%,
+            #195de6 50%,
+            #3b82f6 75%,
+            #195de6 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 200% center;
+    }
+}
+
+/* Floating photo animation */
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Ambient gradient blob */
+.ambient-blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(25, 93, 230, 0.08) 0%, transparent 70%);
+    animation: blob-drift 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes blob-drift {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -20px) scale(1.05);
+    }
+
+    66% {
+        transform: translate(-20px, 15px) scale(0.95);
+    }
+}
