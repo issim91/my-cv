@@ -470,7 +470,7 @@
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Ключевые проекты</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex flex-col gap-6">
 
                     <!-- Project 1: Основной продукт -->
                     <div
@@ -497,17 +497,24 @@
                             <h3
                                 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
                                 Основной продукт (поддержка и развитие)</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                                Разработка и сопровождение backend-системы в продакшене. Снижение критических
-                                инцидентов/ошибок за счёт observability и улучшения процессов качества.
-                            </p>
+                            <div class="flex flex-col gap-2 text-slate-600 text-sm leading-relaxed mb-6">
+                                <p>7 лет разработки и эксплуатации backend-платформы: 10 микросервисов, сотни
+                                    API-эндпоинтов, десятки парсеров, авторизация пользователей.</p>
+                                <p>Прод-контур: CI/CD, логи в OpenSearch, алерты Sentry (email/Slack), метрики в
+                                    CloudWatch.</p>
+                                <p>Крупные миграции: переезд всех сервисов на Dokku + Load Balancer, перенос MongoDB →
+                                    PostgreSQL и переписывание
+                                    legacy сервиса пользователей.</p>
+                                <p>Технический лидер проекта: архитектурные решения, контроль качества и релизов, code
+                                    review, менторинг, доведение фич до продакшена, развитие observability.</p>
+                            </div>
                             <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Microservices</span>
                                 <span
                                     class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Django</span>
                                 <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Celery</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Redis</span>
+                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Dokku</span>
                                 <span
                                     class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">PostgreSQL</span>
                                 <span
