@@ -248,10 +248,11 @@
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Python</span>
                             <span
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Django</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">DRF</span>
                             <span
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Flask</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">REST
-                                API</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Auth
+                                (JWT/OAuth2) </span>
                             <span
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Celery</span>
                             <span
@@ -268,12 +269,13 @@
                         <h4 class="font-bold text-slate-900 mb-3 text-lg">Архитектура</h4>
                         <div class="flex flex-wrap gap-2">
                             <span
-                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Monoliths</span>
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Монолиты</span>
                             <span
-                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Microservices</span>
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Микросервисы</span>
                             <span
-                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Integrations</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">ETL</span>
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Интеграции</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">ETL /
+                                пайплайны данных</span>
                         </div>
                     </div>
                     <!-- Category 3: DB/Cache -->
@@ -289,12 +291,16 @@
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">PostgreSQL</span>
                             <span
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Redis</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Schema
-                                design</span>
                             <span
-                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Indexing</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Query
-                                optimization</span>
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Моделирование
+                                данных</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Индексы</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Миграции</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Оптимизация
+                                запросов</span>
                         </div>
                     </div>
                     <!-- Category 4: DevOps/Infra -->
@@ -309,6 +315,8 @@
                             <span
                                 class="px-2 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase rounded">AWS</span>
                             <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded">Git</span>
+                            <span
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded">CI/CD</span>
                             <span
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded">Nginx</span>
@@ -316,14 +324,85 @@
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded">Dokku</span>
                             <span
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded">Linux</span>
-                            <span
-                                class="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold uppercase rounded">Docker</span>
                         </div>
                         <p class="text-[10px] text-slate-400 mt-3 font-medium italic">AWS: EC2, RDS, S3, CloudWatch,
                             SES, ALB/ELB
                         </p>
                     </div>
-                    <!-- Category 5: AI Integrations -->
+
+                    <!-- Category 5: Performance/Observability -->
+                    <div
+                        class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:border-primary/50 transition-colors">
+                        <div
+                            class="size-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <span class="material-symbols-outlined">analytics</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-3 text-lg">Мониторинг</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Sentry</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">CloudWatch</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">New
+                                Relic</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">OpenSearch</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Load
+                                testing</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Profiling</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Better
+                                Stack</span>
+                        </div>
+                    </div>
+                    <!-- Category 6: Quality & Testing -->
+                    <div
+                        class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:border-primary/50 transition-colors">
+                        <div
+                            class="size-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <span class="material-symbols-outlined">fact_check</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-3 text-lg">Качество и тестирование</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Pytest</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Unit
+                                testing</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Integration
+                                testing</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Code
+                                review</span>
+                        </div>
+                    </div>
+                    <!-- Category 7: Parsing & Automation -->
+                    <div
+                        class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:border-primary/50 transition-colors">
+                        <div
+                            class="size-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                            <span class="material-symbols-outlined">auto_mode</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-3 text-lg">Парсинг и автоматизация</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Playwright</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Selenium</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">BeautifulSoup</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Proxies</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Apify</span>
+                            <span
+                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Instagram</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">X
+                                (Twitter)</span>
+                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">HTML
+                                scraping</span>
+                        </div>
+                    </div>
+                    <!-- Category 8: AI Integrations -->
                     <div
                         class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:border-primary/50 transition-colors">
                         <div
@@ -346,31 +425,6 @@
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Whisper</span>
                             <span
                                 class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Hedra</span>
-                        </div>
-                    </div>
-                    <!-- Category 6: Performance/Observability -->
-                    <div
-                        class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:border-primary/50 transition-colors">
-                        <div
-                            class="size-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
-                            <span class="material-symbols-outlined">analytics</span>
-                        </div>
-                        <h4 class="font-bold text-slate-900 mb-3 text-lg">Производительность и наблюдаемость</h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Load
-                                testing</span>
-                            <span
-                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Profiling</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">New
-                                Relic</span>
-                            <span
-                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Sentry</span>
-                            <span
-                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">OpenSearch</span>
-                            <span
-                                class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">CloudWatch</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded">Better
-                                Stack</span>
                         </div>
                     </div>
                 </div>

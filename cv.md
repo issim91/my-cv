@@ -14,8 +14,10 @@
 -	Backend-разработка: Python, Django, Flask, REST API, Celery, OpenAPI/Swagger
 -	Архитектура: Monoliths & Microservices, External integrations / ETL
 -	Базы данных и кэш: PostgreSQL (schema design, indexing, query optimization), Redis (caching, pub/sub)
--	Инфраструктура и деплой: Git, CI/CD, AWS (EC2, RDS, S3, CloudWatch, SES, ALB/ELB), Dokku, Nginx, Linux, Docker
+-	Инфраструктура и деплой: Git, CI/CD, AWS (EC2, RDS, S3, CloudWatch, SES, ALB/ELB), Dokku, Nginx, Linux
 -	AI-интеграции: OpenAI, Gemini, Replicate, ElevenLabs, HeyGen, Whisper, Hedra
+-	Качество и тестирование: Pytest, Unit tests, Integration tests, Code review, Ruff/Black, pre-commit
+-	Парсинг и автоматизация: Playwright, Selenium, BeautifulSoup, Requests, Proxies
 -	Производительность и наблюдаемость: Load testing, profiling, New Relic (APM/Tracing), Sentry (Errors), OpenSearch (Logs/Search), CloudWatch (Metrics), Better Stack (Uptime)
 
 Качество кода и процессы
