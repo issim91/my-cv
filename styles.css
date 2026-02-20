@@ -88,3 +88,26 @@
         transform: translate(-20px, 15px) scale(0.95);
     }
 }
+
+/* Mobile scroll highlight active state */
+@media (max-width: 767px) {
+
+    #responsibilities .group,
+    #skills .group,
+    #projects .project-card,
+    #personal-projects .project-card,
+    #soft-skills .group {
+        transition: all 0.2s ease-out !important;
+    }
+
+    .mobile-active {
+        border-color: #195de6 !important;
+        box-shadow: 0 10px 15px -3px rgba(25, 93, 230, 0.1), 0 4px 6px -2px rgba(25, 93, 230, 0.05) !important;
+        transform: translateY(-2px);
+    }
+
+    .mobile-active h3,
+    .mobile-active h4 {
+        color: #195de6 !important;
+    }
+}
