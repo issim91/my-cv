@@ -73,60 +73,69 @@
         </header>
         <main class="flex-1 max-w-[1200px] mx-auto px-6 md:px-20">
             <!-- Hero Section -->
-            <section class="relative py-20 md:py-32 flex flex-col md:flex-row gap-12 items-center bg-grid-subtle">
+            <section class="relative py-20 md:py-32 bg-grid-subtle px-10">
                 <div class="ambient-blob -top-20 -left-20 z-0"></div>
                 <div class="ambient-blob -bottom-20 right-0 z-0" style="animation-delay: -5s;"></div>
-                <div class="flex-1 space-y-6 relative z-10">
-                    <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
-                        <span class="relative flex h-2 w-2">
-                            <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                        </span>
-                        Открыт к предложениям (Remoutly)
+                <div class="flex flex-col md:flex-row gap-12 items-center relative z-10 mb-12">
+                    <div class="flex-1 space-y-6">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            Открыт к предложениям (Remoutly)
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight">
+                            Senior <span class="gradient-text">Backend</span> Developer
+                        </h1>
+                        <p class="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">
+                        <p>7+ лет в backend-разработке на Python.</p>
+                        <p>Проектирую и развиваю высоконагруженные системы: архитектура, БД, очереди, CI/CD.</p>
+                        <p>Делаю интеграции и пайплайны данных, включая AI-сервисы.</p>
+                        </p>
                     </div>
-                    <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight">
-                        Senior <span class="gradient-text">Backend</span> Developer
-                    </h1>
-                    <p class="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">
-                        7+ лет в backend-разработке на Python. <br>
-                        Проектирую и развиваю high-load системы: архитектура, БД, очереди, CI/CD, observability. <br>
-                        Делаю интеграции и пайплайны данных, включая AI-сервисы.
-                    </p>
-                    <div class="flex flex-wrap gap-4 pt-4">
-                        <div
-                            class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 cursor-default">
-                            <span class="material-symbols-outlined text-primary">verified_user</span>
-                            <span class="text-sm font-semibold text-slate-700">7+ лет опыта</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 cursor-default">
-                            <span class="material-symbols-outlined text-primary">speed</span>
-                            <span class="text-sm font-semibold text-slate-700">High Load</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 cursor-default">
-                            <span class="material-symbols-outlined text-primary">psychology</span>
-                            <span class="text-sm font-semibold text-slate-700">AI-Интеграции</span>
+                    <div class="w-full md:w-1/3 relative z-10">
+                        <div class="relative group float-animation">
+                            <div
+                                class="absolute -inset-1 bg-gradient-to-r from-primary to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                            </div>
+                            <div class="relative bg-white p-2 rounded-2xl border border-slate-200">
+                                <img alt="Илья Симонов — Senior Backend Developer"
+                                    class="rounded-xl grayscale hover:grayscale-0 transition-all duration-500 w-full object-cover aspect-square"
+                                    data-alt="Портрет Ильи Симонова, Senior Backend Developer" src="me.png" />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/3 relative z-10">
-                    <div class="relative group float-animation">
-                        <div
-                            class="absolute -inset-1 bg-gradient-to-r from-primary to-blue-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
-                        </div>
-                        <div class="relative bg-white p-2 rounded-2xl border border-slate-200">
-                            <img alt="Илья Симонов — Senior Backend Developer"
-                                class="rounded-xl grayscale hover:grayscale-0 transition-all duration-500 w-full object-cover aspect-square"
-                                data-alt="Портрет Ильи Симонова, Senior Backend Developer" src="me.png" />
-                        </div>
+
+                <div class="flex flex-nowrap gap-4 relative z-10 overflow-visible mb-4">
+                    <div
+                        class="flex-shrink-0 flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 cursor-default whitespace-nowrap">
+                        <span class="material-symbols-outlined text-primary">verified_user</span>
+                        <span class="text-sm font-semibold text-slate-700">7+ лет опыта</span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 cursor-default whitespace-nowrap">
+                        <span class="material-symbols-outlined text-primary">speed</span>
+                        <span class="text-sm font-semibold text-slate-700">Высшее образование</span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 cursor-default whitespace-nowrap">
+                        <span class="material-symbols-outlined text-primary">groups</span>
+                        <span class="text-sm font-semibold text-slate-700">Тех-лид</span>
+                    </div>
+                    <div
+                        class="flex-shrink-0 flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-primary/50 hover:-translate-y-0.5 transition-all duration-300 cursor-default whitespace-nowrap">
+                        <span class="material-symbols-outlined text-primary">psychology</span>
+                        <span class="text-sm font-semibold text-slate-700">AI-Интеграции</span>
                     </div>
                 </div>
             </section>
+
             <!-- Responsibilities Section -->
-            <section class="py-32 border-t border-slate-200" id="responsibilities">
+            <section class="py-16 border-t border-slate-200" id="responsibilities">
                 <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Ключевые компетенции</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div
@@ -149,7 +158,8 @@
                             <span class="material-symbols-outlined text-primary text-lg">database</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">Базы данных
+                            <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">Базы
+                                данных
                             </h4>
                             <p class="text-sm text-slate-600 mt-1">Проектирование схем БД, оптимизация запросов,
                                 индексация, профилирование.</p>
@@ -175,7 +185,8 @@
                             <span class="material-symbols-outlined text-primary text-lg">cloud_download</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">Интеграции и
+                            <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">
+                                Интеграции и
                                 сбор данных</h4>
                             <p class="text-sm text-slate-600 mt-1">Интеграции с внешними источниками, устойчивость к
                                 ошибкам, ретраи, прокси.</p>
@@ -188,7 +199,8 @@
                             <span class="material-symbols-outlined text-primary text-lg">lan</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">Асинхронная
+                            <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">
+                                Асинхронная
                                 обработка</h4>
                             <p class="text-sm text-slate-600 mt-1">Очереди и фоновые задачи, обработка пайплайнов
                                 чтения/записи данных.</p>
@@ -201,7 +213,8 @@
                             <span class="material-symbols-outlined text-primary text-lg">build</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">Эксплуатация
+                            <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">
+                                Эксплуатация
                             </h4>
                             <p class="text-sm text-slate-600 mt-1">Сопровождение продакшена: стабильность,
                                 диагностика и устранение проблем.</p>
@@ -214,8 +227,10 @@
                             <span class="material-symbols-outlined text-primary text-lg">rocket_launch</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">CI/CD</h4>
-                            <p class="text-sm text-slate-600 mt-1">Автоматизация сборки, тестов, релизов и деплоя.</p>
+                            <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">CI/CD
+                            </h4>
+                            <p class="text-sm text-slate-600 mt-1">Автоматизация сборки, тестов, релизов и деплоя.
+                            </p>
                         </div>
                     </div>
                     <div
@@ -227,7 +242,8 @@
                         <div>
                             <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">
                                 Наблюдаемость</h4>
-                            <p class="text-sm text-slate-600 mt-1">Метрики, логи, алерты, трассировка, контроль качества
+                            <p class="text-sm text-slate-600 mt-1">Метрики, логи, алерты, трассировка, контроль
+                                качества
                                 работы сервисов.</p>
                         </div>
                     </div>
@@ -240,7 +256,8 @@
                         <div>
                             <h4 class="font-bold text-slate-900 group-hover:text-primary transition-colors">
                                 Производительность</h4>
-                            <p class="text-sm text-slate-600 mt-1">Нагрузочное тестирование, профилирование, устранение
+                            <p class="text-sm text-slate-600 mt-1">Нагрузочное тестирование, профилирование,
+                                устранение
                                 узких мест.</p>
                         </div>
                     </div>
@@ -260,7 +277,7 @@
                 </div>
             </section>
             <!-- Skills Section -->
-            <section class="py-32 border-t border-slate-200" id="skills">
+            <section class="py-16 border-t border-slate-200" id="skills">
                 <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Технический стек</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Category 1: Backend -->
@@ -466,7 +483,7 @@
                 </div>
             </section>
             <!-- Projects Section -->
-            <section class="py-32 border-t border-slate-200" id="projects">
+            <section class="py-16 border-t border-slate-200" id="projects">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Основные проекты</h2>
                 </div>
@@ -555,10 +572,12 @@
                                 <p><span class="font-medium text-slate-800">Интеграция с очередями RabbitMQ,</span>
                                     настройка фоновой обработки и согласование
                                     контрактов взаимодействия.
-                                <p><span class="font-medium text-slate-800">Плотная коммуникация</span> с заказчиком и
+                                <p><span class="font-medium text-slate-800">Плотная коммуникация</span> с заказчиком
+                                    и
                                     frontend-разработчиком: уточнение требований,
                                     декомпозиция, сопровождение релизов. </p>
-                                <p><span class="font-medium text-slate-800">Итог</span> — полностью бесшовный переезд в
+                                <p><span class="font-medium text-slate-800">Итог</span> — полностью бесшовный
+                                    переезд в
                                     новый продакшен (zero downtime).</p>
                                 </p>
                                 <div class="flex flex-wrap gap-2">
@@ -603,8 +622,10 @@
                                     real-time синхронизация игровых данных, низкая задержка,
                                     высокая плотность соединений и устойчивость к пиковым нагрузкам. </p>
 
-                                <p><span class="font-medium text-slate-800">Функциональность:</span> авторизация и права
-                                    доступа, транзакционные сценарии (консистентность состояния), лидерборды и быстрые
+                                <p><span class="font-medium text-slate-800">Функциональность:</span> авторизация и
+                                    права
+                                    доступа, транзакционные сценарии (консистентность состояния), лидерборды и
+                                    быстрые
                                     выборки.</p>
 
                                 <p><span class="font-medium text-slate-800">Проектирование:</span>
@@ -657,7 +678,8 @@
                                     AI-провайдерами, оркестрация очередей генераций: пайплайны, ретраи, контроль
                                     статусов, устойчивость к сбоям и лимитам API.</p>
 
-                                <p><span class="font-medium text-slate-800"> Данные:</span> быстрый поиск и фильтрация
+                                <p><span class="font-medium text-slate-800"> Данные:</span> быстрый поиск и
+                                    фильтрация
                                     по миллионам записей (индексация, оптимизация запросов, кеширование).</p>
 
                                 <p><span class="font-medium text-slate-800"> Статус:</span> MVP в продакшене, проект
@@ -683,10 +705,11 @@
                     </div>
             </section>
             <!-- Soft Skills & Leadership -->
-            <section class="py-32 border-t border-slate-200" id="soft-skills">
+            <section class="py-16 border-t border-slate-200" id="soft-skills">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Как я работаю</h2>
-                    <p class="text-slate-500 mt-3 text-sm max-w-xl mx-auto">Не только код — подход к работе, команде и
+                    <p class="text-slate-500 mt-3 text-sm max-w-xl mx-auto">Не только код — подход к работе, команде
+                        и
                         результату</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -697,10 +720,12 @@
                             class="size-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
                             <span class="material-symbols-outlined">handshake</span>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">Владение
+                        <h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                            Владение
                             продуктом</h4>
                         <p class="text-sm text-slate-600 leading-relaxed">Воспринимаю задачу не как тикет, а как
-                            бизнес-проблему. Задаю вопросы «зачем?» до написания кода — это экономит недели разработки.
+                            бизнес-проблему. Задаю вопросы «зачем?» до написания кода — это экономит недели
+                            разработки.
                         </p>
                     </div>
                     <!-- Card 2 -->
@@ -710,7 +735,8 @@
                             class="size-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
                             <span class="material-symbols-outlined">school</span>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">Менторство
+                        <h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                            Менторство
                         </h4>
                         <p class="text-sm text-slate-600 leading-relaxed">Развиваю Junior/Middle разработчиков через
                             code review, парное программирование и обмен знаниями в команде.</p>
@@ -722,7 +748,8 @@
                             class="size-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
                             <span class="material-symbols-outlined">fact_check</span>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">Качество
+                        <h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                            Качество
                             кода</h4>
                         <p class="text-sm text-slate-600 leading-relaxed">Строгий линтинг и глубокий code
                             review — стандарт, а не опция. Слежу за тех.долгом и не оставляю «потом поправим».</p>
@@ -736,7 +763,8 @@
                         </div>
                         <h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
                             Коммуникация</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">Чётко формулирую статусы, риски и блокировки.
+                        <p class="text-sm text-slate-600 leading-relaxed">Чётко формулирую статусы, риски и
+                            блокировки.
                             Не жду, когда спросят — проактивно выношу проблемы на обсуждение до того, как они станут
                             критичными.</p>
                     </div>
@@ -759,15 +787,18 @@
                             class="size-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
                             <span class="material-symbols-outlined">psychology</span>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">Системное
+                        <h4 class="font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                            Системное
                             мышление</h4>
-                        <p class="text-sm text-slate-600 leading-relaxed">Вижу последствия решений на горизонте месяцев.
-                            Выбираю архитектуру, которая масштабируется, а не просто решает задачу «прямо сейчас».</p>
+                        <p class="text-sm text-slate-600 leading-relaxed">Вижу последствия решений на горизонте
+                            месяцев.
+                            Выбираю архитектуру, которая масштабируется, а не просто решает задачу «прямо сейчас».
+                        </p>
                     </div>
                 </div>
             </section>
             <!-- Contact Section -->
-            <section class="py-32 text-center" id="contact">
+            <section class="py-16 text-center" id="contact">
                 <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">Давайте создадим что-то стоящее</h2>
                 <p class="text-slate-600 text-lg mb-12 max-w-2xl mx-auto">
                     Открыт для интересных предложений, связанных с высоконагруженными системами, AI-интеграциями и
@@ -808,7 +839,7 @@
             </section>
         </main>
         <!-- Footer -->
-        <footer class="py-12 border-t border-slate-200 bg-white">
+        <footer class="py-16 border-t border-slate-200 bg-white">
             <div
                 class="max-w-[1200px] mx-auto px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-6">
                 <p class="text-slate-500 text-sm">© 2024 Илья Симонов. Built with Backend Focus.</p>
