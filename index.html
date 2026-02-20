@@ -548,108 +548,123 @@
                             <h3
                                 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
                                 Миграция backend-архитектуры</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                                Поэтапный перенос backend на новую архитектуру с <span
-                                    class="font-medium text-slate-800">zero downtime</span>. Стабилизация релизов и
-                                снижение рисков в продакшене.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Django</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">PostgreSQL</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Celery</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">CI/CD</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">AWS</span>
-                            </div>
-                        </div>
-                    </div>
+                            <div class="flex flex-col gap-2 text-slate-600 text-sm leading-relaxed mb-6">
 
-                    <!-- Project 3: Игровой модуль (real-time) -->
-                    <div
-                        class="project-card group relative bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300">
-                        <div
-                            class="h-1 bg-gradient-to-r from-slate-200 via-primary/40 to-slate-200 group-hover:from-primary/20 group-hover:via-primary group-hover:to-primary/20 transition-all duration-500">
-                        </div>
-                        <div class="p-8">
-                            <div class="flex items-start justify-between mb-6">
-                                <div
-                                    class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
-                                    <span class="material-symbols-outlined text-2xl">sports_esports</span>
+                                <p><span class="font-medium text-slate-800">Поэтапный перенос</span> всего
+                                    legacy-функционала на новый backend на Django: новые серверы,
+                                    новая БД, переработка модели данных и перепроектирование схемы БД под текущие
+                                    сценарии.
+                                </p>
+
+                                <p><span class="font-medium text-slate-800">Интеграция с очередями RabbitMQ,</span>
+                                    настройка фоновой обработки и согласование
+                                    контрактов взаимодействия.
+                                <p><span class="font-medium text-slate-800">Плотная коммуникация</span> с заказчиком и
+                                    frontend-разработчиком: уточнение требований,
+                                    декомпозиция, сопровождение релизов. </p>
+                                <p><span class="font-medium text-slate-800">Итог</span> — полностью бесшовный переезд в
+                                    новый продакшен (zero downtime).</p>
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Django</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">PostgreSQL</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">RabbitMQ</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">CI/CD</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">AWS</span>
                                 </div>
-                                <span
-                                    class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-full">
-                                    <span class="material-symbols-outlined text-xs">bolt</span>
-                                    Real-time
-                                </span>
-                            </div>
-                            <h3
-                                class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
-                                Игровой модуль (real-time)</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                                Проектирование и реализация <span class="font-medium text-slate-800">real-time</span>
-                                логики игровых сессий: <span class="font-medium text-slate-800">низкая задержка</span>,
-                                высокая
-                                плотность соединений, устойчивость к пикам.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">WebSockets</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Redis</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Async</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">PostgreSQL</span>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Project 4: AI-обработка контента -->
-                    <div
-                        class="project-card group relative bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300">
+                        <!-- Project 3: Игровой модуль (real-time) -->
                         <div
-                            class="h-1 bg-gradient-to-r from-slate-200 via-primary/40 to-slate-200 group-hover:from-primary/20 group-hover:via-primary group-hover:to-primary/20 transition-all duration-500">
-                        </div>
-                        <div class="p-8">
-                            <div class="flex items-start justify-between mb-6">
-                                <div
-                                    class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
-                                    <span class="material-symbols-outlined text-2xl">psychology</span>
+                            class="project-card group relative bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="h-1 bg-gradient-to-r from-slate-200 via-primary/40 to-slate-200 group-hover:from-primary/20 group-hover:via-primary group-hover:to-primary/20 transition-all duration-500">
+                            </div>
+                            <div class="p-8">
+                                <div class="flex items-start justify-between mb-6">
+                                    <div
+                                        class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                                        <span class="material-symbols-outlined text-2xl">sports_esports</span>
+                                    </div>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">bolt</span>
+                                        Real-time
+                                    </span>
                                 </div>
-                                <span
-                                    class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-full">
-                                    <span class="material-symbols-outlined text-xs">auto_awesome</span>
-                                    AI Pipeline
-                                </span>
-                            </div>
-                            <h3
-                                class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
-                                AI-обработка контента</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                                Автоматическая классификация/суммаризация контента на OpenAI/Gemini. Оптимизация затрат
-                                на API на <span class="font-medium text-slate-800">40%</span> через
-                                кеширование/батчинг/контроль параметров.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">OpenAI</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Gemini</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Redis</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">PostgreSQL</span>
-                                <span
-                                    class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Celery</span>
+                                <h3
+                                    class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                                    Игровой модуль (real-time)</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    Проектирование и реализация <span
+                                        class="font-medium text-slate-800">real-time</span>
+                                    логики игровых сессий: <span class="font-medium text-slate-800">низкая
+                                        задержка</span>,
+                                    высокая
+                                    плотность соединений, устойчивость к пикам.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">WebSockets</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Redis</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Async</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">PostgreSQL</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
+                        <!-- Project 4: AI-обработка контента -->
+                        <div
+                            class="project-card group relative bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300">
+                            <div
+                                class="h-1 bg-gradient-to-r from-slate-200 via-primary/40 to-slate-200 group-hover:from-primary/20 group-hover:via-primary group-hover:to-primary/20 transition-all duration-500">
+                            </div>
+                            <div class="p-8">
+                                <div class="flex items-start justify-between mb-6">
+                                    <div
+                                        class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
+                                        <span class="material-symbols-outlined text-2xl">psychology</span>
+                                    </div>
+                                    <span
+                                        class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-500 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-full">
+                                        <span class="material-symbols-outlined text-xs">auto_awesome</span>
+                                        AI Pipeline
+                                    </span>
+                                </div>
+                                <h3
+                                    class="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                                    AI-обработка контента</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    Автоматическая классификация/суммаризация контента на OpenAI/Gemini. Оптимизация
+                                    затрат
+                                    на API на <span class="font-medium text-slate-800">40%</span> через
+                                    кеширование/батчинг/контроль параметров.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">OpenAI</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Gemini</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Redis</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">PostgreSQL</span>
+                                    <span
+                                        class="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-50 border border-slate-200 px-2.5 py-1 rounded-md">Celery</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
             </section>
             <!-- Soft Skills & Leadership -->
             <section class="py-20 border-t border-slate-200" id="soft-skills">
