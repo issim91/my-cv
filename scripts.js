@@ -36,3 +36,141 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Matrix code trail effect for desktop
+document.addEventListener('DOMContentLoaded', () => {
+    // Only initialize on desktop
+    if (window.innerWidth >= 768) {
+        const canvas = document.createElement('canvas');
+        canvas.id = 'matrix-trail';
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0';
+        canvas.style.left = '0';
+        canvas.style.width = '100vw';
+        canvas.style.height = '100vh';
+        canvas.style.pointerEvents = 'none';
+        canvas.style.zIndex = '9999';
+        document.body.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+
+        // Handle high DPI displays
+        const dpr = window.devicePixelRatio || 1;
+
+        function resizeCanvas() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            ctx.scale(dpr, dpr);
+        }
+
+        resizeCanvas();
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                canvas.style.display = 'block';
+                resizeCanvas();
+            } else {
+                canvas.style.display = 'none';
+            }
+        });
+
+        const particles = [];
+        // Matrix-like characters
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%""\'#&_(),.;:?!\\|{}<>[]^~ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ';
+
+        let lastMouseX = 0;
+        let lastMouseY = 0;
+        let distAccumulator = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            if (window.innerWidth < 768) return;
+
+            // Calculate distance
+            const dx = e.clientX - lastMouseX;
+            const dy = e.clientY - lastMouseY;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (lastMouseX !== 0 && lastMouseY !== 0) {
+                distAccumulator += distance;
+            }
+
+            // Emit a particle every 30 pixels to reduce density
+            if (distAccumulator >= 30 || (lastMouseX === 0 && lastMouseY === 0)) {
+                distAccumulator = 0;
+
+                // Interpolate coordinates for very fast mouse movements to prevent huge gaps
+                if (distance > 40 && lastMouseX !== 0 && lastMouseY !== 0) {
+                    const steps = Math.floor(distance / 30);
+                    for (let i = 1; i <= steps; i++) {
+                        particles.push({
+                            x: lastMouseX + dx * (i / steps),
+                            y: lastMouseY + dy * (i / steps),
+                            char: chars[Math.floor(Math.random() * chars.length)],
+                            life: 1,
+                            size: Math.random() * 6 + 10,
+                            speedY: Math.random() * 1.5 + 0.5,
+                            lastUpdate: Date.now(),
+                            updateInterval: Math.random() * 100 + 50
+                        });
+                    }
+                }
+
+                // Emit main particle
+                particles.push({
+                    x: e.clientX,
+                    y: e.clientY,
+                    char: chars[Math.floor(Math.random() * chars.length)],
+                    life: 1,
+                    size: Math.random() * 6 + 10, // 10-16px text size
+                    speedY: Math.random() * 1.5 + 0.5, // 0.5-2px fall speed per frame
+                    lastUpdate: Date.now(),
+                    updateInterval: Math.random() * 100 + 50 // Update character occasionally
+                });
+            }
+
+            lastMouseX = e.clientX;
+            lastMouseY = e.clientY;
+        });
+
+        function animate() {
+            // Clear trail cleanly
+            ctx.clearRect(0, 0, width, height);
+
+            const now = Date.now();
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+
+                p.life -= 0.035; // Fade out rate (increased to disappear faster)
+                p.y += p.speedY; // Fall down
+
+                // Random character glitched effect over time
+                if (now - p.lastUpdate > p.updateInterval) {
+                    p.char = chars[Math.floor(Math.random() * chars.length)];
+                    p.lastUpdate = now;
+                }
+
+                if (p.life <= 0) {
+                    particles.splice(i, 1);
+                    i--;
+                    continue;
+                }
+
+                ctx.font = `bold ${p.size}px monospace`;
+                // Add a text shadow for the glow effect
+                ctx.shadowColor = '#195de6';
+                ctx.shadowBlur = Math.max(0, p.life * 8);
+                // Draw with primary color opacity linked to life span
+                ctx.fillStyle = `rgba(25, 93, 230, ${p.life})`;
+                ctx.fillText(p.char, p.x - p.size / 2, p.y + p.size / 2);
+                ctx.shadowBlur = 0; // Reset for performance
+            }
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+    }
+});
