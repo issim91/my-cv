@@ -136,6 +136,29 @@ document.addEventListener('DOMContentLoaded', () => {
             lastMouseY = e.clientY;
         });
 
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth < 768) return;
+
+            // Emit a burst of particles in a circular explosion pattern
+            const numParticles = 30; // Number of particles in the explosion
+            for (let i = 0; i < numParticles; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 4 + 2; // Random speed outwards
+                particles.push({
+                    x: e.clientX,
+                    y: e.clientY,
+                    char: chars[Math.floor(Math.random() * chars.length)],
+                    life: 1,
+                    size: Math.random() * 8 + 12, // 12-20px text size (slightly larger for the blast)
+                    speedX: Math.cos(angle) * speed,
+                    speedY: Math.sin(angle) * speed,
+                    isBlast: true,
+                    lastUpdate: Date.now(),
+                    updateInterval: Math.random() * 80 + 30 // Update character a bit faster
+                });
+            }
+        });
+
         function animate() {
             // Clear trail cleanly
             ctx.clearRect(0, 0, width, height);
@@ -144,8 +167,14 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < particles.length; i++) {
                 const p = particles[i];
 
-                p.life -= 0.035; // Fade out rate (increased to disappear faster)
-                p.y += p.speedY; // Fall down
+                p.life -= p.isBlast ? 0.02 : 0.035; // Blast particles fade slightly slower
+                p.x += p.speedX || 0;
+                p.y += p.speedY; // Fall down or expand outward
+
+                // Optional: For blast particles add slight gravity over time
+                if (p.isBlast) {
+                    p.speedY += 0.05; // gravity pulls blast particles down
+                }
 
                 // Random character glitched effect over time
                 if (now - p.lastUpdate > p.updateInterval) {
