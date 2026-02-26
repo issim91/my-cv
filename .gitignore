@@ -1,1 +1,14 @@
-/codex
+# Dependencies
+codex/
+node_modules/
+
+# Generated files
+files/
+tools/
+
+# CV variants (print versions)
+cv-print*.html
+
+# System & IDE
+.DS_Store
+.idea/
